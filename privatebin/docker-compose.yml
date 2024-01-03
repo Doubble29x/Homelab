@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+    nginx-fpm-alpine:
+        image: privatebin/nginx-fpm-alpine
+        volumes:
+            - /home/user/privatebin-data:/srv/data'
+        ports:
+            - '8091:8080'
+        read_only: true
+        restart: always
+

@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  lingva:
+    container_name: lingva
+    image: thedaviddelta/lingva-translate:latest
+    restart: unless-stopped
+    environment:
+      - site_domain=lingva.pqpera.xyz
+      - force_default_theme=dark
+      - default_source_lang=auto
+      - default_target_lang=en
+    ports:
+      - 3001:3000

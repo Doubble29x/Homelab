@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+  stirling-pdf:
+    image: frooodle/s-pdf:latest
+    ports:
+      - '8489:8080'
+    volumes:
+      - /home/user/trainingdata:/usr/share/tesseract-ocr/4.00/tessdata

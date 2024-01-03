@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+
+  teddit:
+    container_name: teddit
+    image: teddit/teddit:latest
+    environment:
+      - REDIS_HOST=teddit-redis
+    ports:
+      - "8085:8080"
+    networks:
+      - teddit_net
+    healthcheck:
+      test: ["CMD", "wget" ,"--no-verbose", "--tries=1", "--spider", "https://teddit.pqpera.xyz/about"]
+      interval: 1m
+      timeout: 3s
+    depends_on:
+      - teddit-redis
+
+  teddit-redis:
+    container_name: teddit-redis
+    image: redis:6.2.5-alpine
+    command: redis-server
+    environment:
+      - REDIS_REPLICATION_MODE=master
+    networks:
+      - teddit_net
+
+networks:
+  teddit_net:
