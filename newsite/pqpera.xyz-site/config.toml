@@ -1,0 +1,51 @@
+baseURL = 'https://pqpera.xyz/'
+languageCode = 'en-us'
+theme = "/home/john/pqpera.xyz-site/themes/nightfall"
+
+[menu]
+ # [[menu.header]]
+  #  name = "blog"
+   # weight = 0
+    #url = "blog"
+  [[menu.header]]
+    name = "about"
+    weight = 1
+    url = "/about/"
+
+[params]
+user = "root"
+hostname = "pqpera.xyz"
+  [params.author]
+    name = "Pqpera"  # Website and RSS feed author
+    email = "email@example.com"  # RSS feed email address
+
+
+readingTime = true  # Show reading time on post page
+published = true  # Show published data on post page
+
+[[params.social]]
+key = 0
+name = "Invidious"
+url = "https://inv.pqpera.xyz"
+
+[[params.social]]
+key = 1
+name = "Vaultwarden"
+url = "https://valwarden.pqpera.xyz"
+
+[[params.social]]
+key = 2
+name = "Github"
+url = "https://github.com/Doubble29x"
+[[params.social]]
+key = 3
+name = "FreshRSS"
+url = "https://freshrss.pqpera.xyz"
+[[params.social]]
+key = 4
+name = "Pdf tools"
+url = "https://pdftoolz.pqpera.xyz"
+[[params.social]]
+key = 5
+name = "Email"
+url = "mailto:admin@pqpera.xyz"
